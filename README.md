@@ -90,23 +90,23 @@ After training, results were meticulously analyzed through:
 
 ### CNN Model
 
-<img src="results/cnn/accuracy_vs_epochs_cnn.png" alt="CNN Accuracy vs Epochs" width="530"/>  
-<img src="results/cnn/confusion_matrix.png" alt="CNN Confusion Matrix" width="300"/>
+<img src="results/cnn/accuracy_vs_epochs_cnn.png" alt="CNN Accuracy vs Epochs" width="600"/>  
+<img src="results/cnn/confusion_matrix.png" alt="CNN Confusion Matrix" width="600"/>
 
 ---
 
 
 ### ResNet50 Model
 
-<img src="results/resnet50/accuracy_vs_epochs_resnet50.png" alt="ResNet50 Accuracy vs Epochs" width="530"/>  
-<img src="results/resnet50/confusion_matrix.png" alt="ResNet50 Confusion Matrix" width="300"/>
+<img src="results/resnet50/accuracy_vs_epochs_resnet50.png" alt="ResNet50 Accuracy vs Epochs" width="600"/>  
+<img src="results/resnet50/confusion_matrix.png" alt="ResNet50 Confusion Matrix" width="600"/>
 
 ---
 
 ### MobileNet Model
 
-<img src="results/mobilenet/accuracy_vs_epochs_mobilenet.png" alt="MobileNet Accuracy vs Epochs" width="530"/>  
-<img src="results/mobilenet/confusion_matrix.png" alt="MobileNet Confusion Matrix" width="300"/>
+<img src="results/mobilenet/accuracy_vs_epochs_mobilenet.png" alt="MobileNet Accuracy vs Epochs" width="600"/>  
+<img src="results/mobilenet/confusion_matrix.png" alt="MobileNet Confusion Matrix" width="600"/>
 
 ---
 

@@ -1,0 +1,10 @@
+Classification Report
+                       precision    recall  f1-score   support
+
+Potato___Early_blight       1.00      0.99      0.99       738
+ Potato___Late_blight       0.96      1.00      0.98       740
+     Potato___healthy       1.00      0.96      0.98       527
+
+             accuracy                           0.98      2005
+            macro avg       0.99      0.98      0.98      2005
+         weighted avg       0.98      0.98      0.98      2005

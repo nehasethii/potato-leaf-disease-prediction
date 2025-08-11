@@ -1,0 +1,63 @@
+Dataset size Original : 848
+-------------CNN Model Performance---------------
+
+Training Accuracy:
+- All learning rates reach nearly 100% training accuracy by 30–50 epochs.
+- LR=0.001 shows instability around 20 epochs (drops to ~92.8%) — likely a training issue.
+
+Test Accuracy:
+- LR = 0.0001 performs best and most stable, peaking at ~99% test accuracy at 40 epochs.
+- LR = 0.01 is also consistent (~98.2%) but slightly below LR=0.0001.
+- LR = 0.001 shows a sharp dip to 90% at 20 epochs, and stays volatile.
+
+Conclusion:
+- Best Learning Rate: `0.0001`  
+- Best Epoch Count: `40`  
+- Reason: High and stable test accuracy (~99%), consistent training behavior, and no overfitting signs.
+
+
+--------------ResNet-50 Model Performance----------------
+
+Training Accuracy:
+- LR=0.001 achieves the highest and most stable training accuracy (~81–82%) across epochs.
+- LR=0.01 shows instability, dropping sharply (~30% at 40 epochs) but recovers later.
+- LR=0.0001 trains smoothly but with lower final accuracy (~75%).
+
+Test Accuracy:
+- LR=0.001 performs best and most consistently, reaching ~70% test accuracy at 50 epochs.
+- LR=0.0001 is stable but lower (~65%).
+- LR=0.01 is unstable, with a sharp dip (~34% at 40 epochs) but recovers to ~68%.
+
+Conclusion:
+- Best Learning Rate: `0.001`  
+- Best Epoch Count: `50`  
+- Reason: Highest and most stable test accuracy (~70%) without sudden crashes, showing good generalization and training stability.
+
+
+-------------MobileNetV2 Model Performance-------------
+
+Training Accuracy:
+- All learning rates (LR=0.01, 0.001, 0.0001) achieve very high training accuracy (~99–100%) by 30–50 epochs.
+- LR=0.0001 reaches 100% training accuracy fastest and remains very consistent.
+
+Test Accuracy:
+- LR=0.0001 gives the most stable and best test accuracy, peaking around 99%.
+- LR=0.001 also performs well, peaking at ~99% but with slight fluctuation.
+- LR=0.01 stays a bit lower (~98.5–98.8%) and has minor instability.
+
+Conclusion:
+- Best Learning Rate: `0.0001`  
+- Best Epoch Count: `40`  
+- Reason: Achieves high and stable test accuracy (~99%) with smooth training, minimal overfitting, and fastest convergence.
+
+-------------------------------------------------------------------------------------------------------------------------
+Model     | Best Learning Rate | Best Epochs | Test Accuracy (%) | Observations
+-------------------------------------------------------------------------------------------------------------------------
+CNN       | 0.0001             | 40          | ~99%              | Very stable, no overfitting
+ResNet-50 | 0.001              | 50          | ~70%              | Stable after 50 epochs, deeper model so harder training
+MobileNet | 0.0001             | 40          | ~99%              | Fast convergence, very stable
+
+
+-CNN and MobileNet: Both achieve ~99% test accuracy, but MobileNet is more lightweight and efficient.
+-ResNet-50: More complex model; needs careful tuning. Lower final accuracy without advanced techniques.
+

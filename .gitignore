@@ -5,6 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
+bfg.jar
+
 
 # Distribution / packaging
 .Python
@@ -205,4 +207,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-"models/*.h5" 
+models/cnn_model.h5
+models/resnet50_model.h5
+

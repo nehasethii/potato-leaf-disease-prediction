@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<header>
+    <h2>Welcome, {{ username }}!</h2>
+</header>
+
+<div class="container" style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap;">
+    <!-- Left card -->
+    <div class="card" style="flex: 1 1 500px; max-width: 500px;">
+        <h2>Upload Your Crop Image</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label for="crop_image" class="file-label">Choose an image to upload:</label>
+            <input type="file" id="crop_image" name="crop_image" class="file-input" required><br><br>
+            <button type="submit" class="button">Upload Image</button>
+        </form>
+
+        {% if image_url %}
+        <div class="image-preview" style="margin-top: 1rem;">
+            <h3>Uploaded Image:</h3>
+            <img src="{{ image_url }}" alt="Crop Image" style="width: 100%; height: auto; border-radius: 8px; object-fit: contain; box-shadow: 0 0 8px rgba(0,0,0,0.1);">
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Right card -->
+    <div class="card" style="flex: 1 1 500px; max-width: 500px; display: flex; flex-direction: column; align-items: center;">
+        <h2>Prediction Result</h2>
+        {% if prediction %}
+            <p><strong>Predicted Class:</strong> {{ prediction }}</p>
+        {% endif %}
+
+        <h3>MobileNetV2 Confusion Matrix:</h3>
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <img src="{{ url_for('static', filename='confusion_matrix.png') }}" 
+                 alt="MobileNet Confusion Matrix"
+                 style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</div>
+{% endblock %}

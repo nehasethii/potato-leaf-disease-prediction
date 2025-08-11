@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>About the Project</h2>
+
+    <p>
+        This Crop Disease Prediction Project is built with the aim of empowering farmers and agricultural workers by providing them an intelligent tool to identify diseases in potato crops through image-based classification. Early detection of plant diseases is vital in agriculture to reduce crop loss, ensure food security, and reduce reliance on chemical treatments. Our system uses deep learning to automatically detect diseases from uploaded leaf images, helping users make informed decisions without needing to consult an expert physically.
+    </p>
+
+    <h3>🎯 Objective</h3>
+    <p>
+        The goal is to classify uploaded images of potato crop leaves into three disease categories:
+    </p>
+    <ul>
+        <li><strong>Early Blight:</strong> Caused by <em>Alternaria solani</em>. Identified by concentric brown spots on older leaves.</li>
+        <li><strong>Late Blight:</strong> Caused by <em>Phytophthora infestans</em>. Highly destructive and can destroy entire fields rapidly.</li>
+        <li><strong>Healthy:</strong> Leaves that are free from visible disease symptoms, serving as a baseline for comparison.</li>
+    </ul>
+
+    <h3>🧠 Deep Learning Model Used</h3>
+    <p>
+        After experimenting with several deep learning architectures, we finalized <strong>MobileNetV2</strong> due to its balance of high accuracy and lightweight size—ideal for fast real-time web deployment. We also tested other models like CNN from scratch and ResNet50 to compare performance.
+    </p>
+
+    <h3>🛠️ Model Selection & Hyperparameter Tuning</h3>
+    <p>
+        To find the most optimal model, we conducted a detailed comparative analysis using the following criteria:
+    </p>
+    <ul>
+        <li><strong>Model Architectures:</strong> CNN (custom), ResNet50, and MobileNetV2</li>
+        <li><strong>Dataset:</strong> Potato subset from PlantVillage dataset, augmented with random rotations, flips, and brightness shifts</li>
+        <li><strong>Input Size:</strong> All images resized to 224x224</li>
+        <li><strong>Loss Function:</strong> Categorical Crossentropy</li>
+        <li><strong>Evaluation Metrics:</strong> Accuracy, Confusion Matrix, Precision, Recall, and F1-Score</li>
+        <li><strong>Optimization Algorithm:</strong> Adam optimizer</li>
+        <li><strong>Learning Rates Tried:</strong> 0.01, 0.001, 0.0001</li>
+        <li><strong>Epochs Tried:</strong> 10, 20, 30, 40, 50</li>
+        <li><strong>Batch Sizes:</strong> 16 and 32</li>
+        <li><strong>Data Split:</strong> 80% training , 20% test</li>
+    </ul>
+
+    <p>
+        We trained each model on various combinations of learning rates and epochs and recorded results in Excel. Confusion matrices and graphs were generated for each run. MobileNetV2 with learning rate <strong>0.0001</strong> and <strong>30 epochs</strong> achieved the best balance of:
+    </p>
+    <ul>
+        <li>High test accuracy (above 95%)</li>
+        <li>Low overfitting (gap between training and validation accuracy)</li>
+        <li>Fast inference time suitable for real-time prediction on web</li>
+    </ul>
+
+    <h3>⚙️ System Workflow</h3>
+    <ol>
+        <li>User uploads a crop image through the web interface.</li>
+        <li>Image is resized and normalized before being passed to the MobileNetV2 model.</li>
+        <li>Model predicts the class (Early Blight, Late Blight, or Healthy).</li>
+        <li>Prediction result and uploaded image preview are shown on screen.</li>
+        <li>Confusion matrix image helps user understand model confidence visually.</li>
+    </ol>
+
+    <h3>💡 Technologies Used</h3>
+    <ul>
+        <li><strong>Frontend:</strong> HTML, CSS</li>
+        <li><strong>Backend:</strong> Flask (Python)</li>
+        <li><strong>Deep Learning:</strong> TensorFlow, Keras</li>
+        <li><strong>Model:</strong> MobileNetV2</li>
+        <li><strong>Database:</strong> SQLite</li>
+    </ul>
+
+    <h3>📈 Future Scope</h3>
+    <ul>
+        <li>Extend the model to other vegetable crops (tomato, brinjal, cucumber, cabbage, etc.)</li>
+        <li>Deploy the app as a mobile application with camera capture feature</li>
+        <li>Enable real-time chat support with agricultural experts</li>
+    </ul>
+
+    <p>
+        This project demonstrates the power of AI in agriculture and reflects how technology can assist even small-scale farmers in reducing crop loss and improving productivity.
+    </p>
+</div>
+{% endblock %}

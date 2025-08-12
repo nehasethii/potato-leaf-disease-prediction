@@ -1,37 +1,38 @@
-# 🥔 Potato Disease Prediction Using Deep Learning 🧠🌿
-## 📑 Table of Contents
+# Potato Disease Prediction Using Deep Learning
 
-- [🌟 Project Overview](#-project-overview)
-- [🚀 Key Features](#-key-features)
-- [🥔 About Potato Diseases](#-about-potato-diseases)
-- [🧰 Tech Stack & Tools](#-tech-stack--tools)
-- [🚜 Project Description](#-project-description-robust-potato-disease-classification-through-systematic-model-selection-and-hyperparameter-optimization-)
-- [📊 Comprehensive Evaluation and Analysis](#-comprehensive-evaluation-and-analysis)
-- [🌐 Web Application Integration](#-web-application-integration)
-- [⚡ Quick Setup & Run](#-quick-setup--run)
-- [🤝 Contributions](#-contributions)
-- [📄 License](#-license)
-- [✉️ Contact](#-contact)
+### Table of Contents
+
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+- [About Potato Diseases](#about-potato-diseases)
+- [Tech Stack & Tools](#tech-stack--tools)
+- [Project Description](#project-description-robust-potato-disease-classification-through-systematic-model-selection-and-hyperparameter-optimization-)
+- [Comprehensive Evaluation and Analysis](#comprehensive-evaluation-and-analysis)
+- [Web Application Integration](#web-application-integration)
+- [Quick Setup & Run](#quick-setup--run)
+- [Contributions](#contributions)
+- [License](#license)
+- [Contact](#contact)
 
 
-## 🌟 Project Overview
-This project leverages **state-of-the-art deep learning models** to classify **potato leaf diseases** with high accuracy. Early detection helps farmers prevent crop loss and increase yield.
+### Project Overview
+This project leverages state-of-the-art deep learning models to classify potato leaf diseases with high accuracy. Early detection helps farmers prevent crop loss and increase yield.
 
 The three classes detected are:
 
-* 🦠 **Potato Early Blight**
-* 🍃 **Healthy Potato Leaves**
-* ⚠️ **Potato Late Blight**
+* Potato Early Blight
+* Healthy Potato Leaves
+* Potato Late Blight
 
-## 🚀 Key Features
+### Key Features
 
-* **Multi-class image classification** of potato leaf diseases using CNN, MobileNet, and ResNet50.
+* Multi-class image classification of potato leaf diseases using CNN, MobileNet, and ResNet50.
 * Data preprocessing pipeline with augmentation to improve model robustness.
-* Rigorous **45 different hyperparameter and architecture configurations** explored for each model to optimize performance.
+* Rigorous 45 different hyperparameter and architecture configurations explored for each model to optimize performance.
 * Web app with user authentication and live image upload for disease detection.
 * Detailed evaluation with accuracy plots, confusion matrices, and classification reports.
 
-## 🥔 About Potato Diseases
+### About Potato Diseases
 
 | Disease        | Description                                                                                                          |
 | -------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -40,7 +41,7 @@ The three classes detected are:
 | Healthy Leaves | Normal, disease-free potato leaves essential for photosynthesis and crop growth.                                                                        |
 
 
-## 🧰 Tech Stack & Tools
+### Tech Stack & Tools
 | Category             | Tools & Libraries        | 
 | -------------------- | ------------------------ | 
 | Programming Language | Python                   | 
@@ -50,67 +51,64 @@ The three classes detected are:
 | Database             | SQLite                   | 
 | Visualization        | Matplotlib, Seaborn      | 
 
-
-
-## 🚜 Project Description: Robust Potato Disease Classification through Systematic Model Selection and Hyperparameter Optimization 🎯
-### 🤔 Thoughtful Model Selection
+### Project Description: 
+#### (Robust Potato Disease Classification through Systematic Model Selection and Hyperparameter Optimization)
 
 We selected three deep learning architectures — a custom Convolutional Neural Network (CNN), MobileNet, and ResNet50 — chosen based on their complementary strengths and resource profiles:
 
-* **CNN**: A lightweight model optimized for limited computational resources, enabling faster training and inference. ⚡
-* **MobileNet**: A mobile-friendly architecture balancing accuracy and efficiency, ideal for deployment on resource-constrained devices. 📱
-* **ResNet50**: A deeper, more complex network capable of capturing intricate features but requiring higher computational power. 💻
+* CNN: A lightweight model optimized for limited computational resources, enabling faster training and inference.
+* MobileNet: A mobile-friendly architecture balancing accuracy and efficiency, ideal for deployment on resource-constrained devices.
+* ResNet50: A deeper, more complex network capable of capturing intricate features but requiring higher computational power.
 
 This diverse model set allows comprehensive exploration of trade-offs between model complexity, resource requirements, and predictive performance.
 
-### ⚙️ Extensive Hyperparameter Tuning: 45 Unique Configurations
+#### Extensive Hyperparameter Tuning: 45 Unique Configurations
 
 To maximize performance and robustness, each architecture was trained across 45 distinct configurations, systematically varying key hyperparameters including:
 
-* Learning rates to balance convergence speed and stability 🎯
-* Batch sizes to optimize training dynamics and generalization 📊
-* Number of epochs to prevent underfitting or overfitting ⏳
-* Optimizer algorithms (Adam) to identify the best optimization strategy 🔄
-* Dropout rates for effective regularization 🛡️
-* Layer architectures such as convolutional filter sizes and dense neuron counts 🧱
-* Data augmentation parameters (rotation, zoom, flipping) to improve model generalization 🔄
+* Learning rates to balance convergence speed and stability
+* Batch sizes to optimize training dynamics and generalization
+* Number of epochs to prevent underfitting or overfitting
+* Optimizer algorithms (Adam) to identify the best optimization strategy
+* Dropout rates for effective regularization
+* Layer architectures such as convolutional filter sizes and dense neuron counts
+* Data augmentation parameters (rotation, zoom, flipping) to improve model generalization
 
 Training employed early stopping based on validation loss, ensuring each configuration reached optimal performance without overfitting.
 
-### 📊 Comprehensive Evaluation and Analysis
+#### Comprehensive Evaluation and Analysis
 
 After training, results were meticulously analyzed through:
 
-* **Excel spreadsheets** documenting raw metrics and hyperparameter settings 📈  
-* **Accuracy and loss plots** visualizing learning behavior across epochs 📉  
-* **Confusion matrices** assessing class-wise performance and error patterns 🔍  
-* **Classification reports** summarizing precision, recall, and F1-scores for all classes 📋  
+* Excel spreadsheets documenting raw metrics and hyperparameter settings  
+* Accuracy and loss plots visualizing learning behavior across epochs  
+* Confusion matrices assessing class-wise performance and error patterns  
+* Classification reports summarizing precision, recall, and F1-scores for all classes  
 
 ---
 
-### CNN Model
+#### CNN Model
 
 <img src="results/cnn/accuracy_vs_epochs_cnn.png" alt="CNN Accuracy vs Epochs" width="600"/>  
 <img src="results/cnn/confusion_matrix.png" alt="CNN Confusion Matrix" width="600"/>
 
 ---
 
-
-### ResNet50 Model
+#### ResNet50 Model
 
 <img src="results/resnet50/accuracy_vs_epochs_resnet50.png" alt="ResNet50 Accuracy vs Epochs" width="600"/>  
 <img src="results/resnet50/confusion_matrix.png" alt="ResNet50 Confusion Matrix" width="600"/>
 
 ---
 
-### MobileNet Model
+#### MobileNet Model
 
 <img src="results/mobilenet/accuracy_vs_epochs_mobilenet.png" alt="MobileNet Accuracy vs Epochs" width="600"/>  
 <img src="results/mobilenet/confusion_matrix.png" alt="MobileNet Confusion Matrix" width="600"/>
 
 ---
 
-### 🔍 Analysis Summary
+#### Analysis Summary
 
 **Dataset size Original:** 848
 
@@ -178,18 +176,18 @@ After training, results were meticulously analyzed through:
 - CNN and MobileNet both achieve ~99% test accuracy, but MobileNet is more lightweight and efficient.  
 - ResNet-50 is a more complex model needing careful tuning and achieves lower final accuracy without advanced techniques.
 
-### 🌐 Web Application Integration
+#### Web Application Integration
 
 The best-performing model, selected based on thorough evaluation, is integrated into a Flask-based web interface allowing users to upload leaf images and receive disease predictions. This bridges the gap between research and practical agricultural use.
 
-## ⚡ Quick Setup & Run
+### Quick Setup & Run
 
 1. Clone the repository
 
 ```bash
 git clone https://github.com/nehasethii/potato-leaf-disease-prediction.git
 cd potato-leaf-disease-prediction
-```
+````
 
 2. Create and activate a virtual environment
 
@@ -229,19 +227,20 @@ python create_db.py
 python app.py
 ```
 
-## 🤝 Contributions
+### Contributions
 
 Contributions, issue reports, and feature requests are welcome! Please fork and submit a pull request.
 
 ---
 
-## 📄 License
+### License
 
 MIT License — see [LICENSE](LICENSE).
 
 ---
 
-## ✉️ Contact
+### Contact
 
 Reach out via the contact page on the app or open an issue here on GitHub.
 
+```

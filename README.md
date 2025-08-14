@@ -29,7 +29,7 @@ The three classes detected are:
 * Multi-class image classification of potato leaf diseases using CNN, MobileNet, and ResNet50.
 * Data preprocessing pipeline with augmentation to improve model robustness.
 * Rigorous 45 different hyperparameter and architecture configurations explored for each model to optimize performance.
-* Web app with user authentication and live image upload for disease detection.
+* Web app with user authentication and image upload for disease detection.
 * Detailed evaluation with accuracy plots, confusion matrices, and classification reports.
 
 ### About Potato Diseases
@@ -49,7 +49,7 @@ The three classes detected are:
 | Data Processing      | NumPy, Pandas            |  
 | Web Framework        | Flask                    | 
 | Database             | SQLite                   | 
-| Visualization        | Matplotlib, Seaborn      | 
+| Visualization        | Matplotlib               | 
 
 ### Project Description: 
 #### (Robust Potato Disease Classification through Systematic Model Selection and Hyperparameter Optimization)
@@ -72,7 +72,7 @@ To maximize performance and robustness, each architecture was trained across 45 
 * Optimizer algorithms (Adam) to identify the best optimization strategy
 * Dropout rates for effective regularization
 * Layer architectures such as convolutional filter sizes and dense neuron counts
-* Data augmentation parameters (rotation, zoom, flipping) to improve model generalization
+* Data augmentation parameters (rotation, brightness adjust) to improve model generalization
 
 Training employed early stopping based on validation loss, ensuring each configuration reached optimal performance without overfitting.
 
